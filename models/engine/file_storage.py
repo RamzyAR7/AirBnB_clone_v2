@@ -46,7 +46,7 @@ class FileStorage:
                     self.__objects[key] = eval(value['__class__'])(**value)
         else:
             return
-  
+
     def delete(self, obj=None):
         """ methode for delete obj"""
         if obj is not None:
