@@ -22,9 +22,9 @@ class BaseModel:
         id = Column(String(60), nullable=False,
                     unique=True, primary_key=True)
         created_at = Column(DateTime, nullable=False,
-                            default=datetime.utcnow())
+                            default=datetime.now(timezone.utc))
         updated_at = Column(DateTime, nullable=False,
-                            default=datetime.utcnow())
+                            default=datetime.now(timezone.utc))
     def __init__(self, *args, **kwargs):
         """ init methoud for BaseModel"""
         if kwargs:
