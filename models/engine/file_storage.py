@@ -18,8 +18,10 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
-    def all(self):
+    def all(self, cls=None):
         """ for display all objs"""
+        if cls is not None:
+            return {key: obj for key, obj in self.__objects.items() if isinstance(obj, cls)}
         return self.__objects
 
     def new(self, obj):
@@ -44,3 +46,9 @@ class FileStorage:
                     self.__objects[key] = eval(value['__class__'])(**value)
         else:
             return
+  
+    def delete(self, obj=None):
+        """ methode for delete obj"""
+        if obj is not None:
+            key = f"{type(obj).__name__}.{obj.id}"
+            self.__objects.pop(key, None)
