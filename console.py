@@ -20,17 +20,6 @@ class HBNBCommand(cmd.Cmd):
     classes = ["BaseModel", "User", "Amenity",
                "City", "Place", "Review", "State"]
 
-    # def do_create(self, args):
-    #     """Creates a new instance of BaseModel."""
-    #     if not args:
-    #         print("** class name missing **")
-    #         return
-    #     try:
-    #         obj = eval(args)()
-    #         storage.save()
-    #         print(obj.id)
-    #     except NameError:
-    #         print("** class doesn't exist **")
 
     def do_create(self, args):
         """Creates a new instance of BaseModel."""
@@ -38,12 +27,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
             return
 
-        pattern = re.compile(r"(\w+)\s+([\w_]+=.*)*")
+        pattern = re.compile(r"(\w+)\s*([\w_]+=.*)*")
         match = pattern.match(args)
-
-        if not match:
-            print("** invalid syntax **")
-            return
 
         class_name = match.group(1)
         if class_name not in self.classes:
@@ -52,20 +37,19 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             obj = eval(class_name)()
-            print(f"Created instance of {class_name}")
 
-            # Pattern to match key-value pairs
-            pattern2 = re.compile(r"(\w+)=(\".*?\"|[\d.]+|[\d]+)")
+            pattern2 = re.compile(r"(\w+)=(\".*?\"|-?[\d.]+|-?[\d]+)")
             matches2 = pattern2.finditer(match.group(2) or "")
 
             for match2 in matches2:
                 key = match2.group(1)
                 value = eval(match2.group(2))
+                if isinstance(value, str):
+                    value = value.replace("_", " ")
 
                 if hasattr(obj, key):
                     if (isinstance(getattr(obj, key), type(value))):
                         setattr(obj, key, value)
-                        print(f"Set attribute '{key}' to '{value}'")
             storage.save()
             print(obj.id)
         except NameError:

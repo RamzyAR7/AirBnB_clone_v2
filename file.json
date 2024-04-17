@@ -5,5 +5,305 @@
         "updated_at": "2024-04-17T03:36:11.756049",
         "name": "ali_aa",
         "__class__": "State"
+    },
+    "State.e3698979-ffd1-4243-9441-08bb7ce7f848": {
+        "id": "e3698979-ffd1-4243-9441-08bb7ce7f848",
+        "created_at": "2024-04-17T03:41:02.742552",
+        "updated_at": "2024-04-17T03:41:02.742558",
+        "name": "California",
+        "__class__": "State"
+    },
+    "Place.dbbdeb40-14ee-40f5-b93b-16b4c092ce83": {
+        "id": "dbbdeb40-14ee-40f5-b93b-16b4c092ce83",
+        "created_at": "2024-04-17T03:41:31.330417",
+        "updated_at": "2024-04-17T03:41:31.330422",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My_little_house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "__class__": "Place"
+    },
+    "Place.9a9d538c-5569-40a8-8958-72636853872e": {
+        "id": "9a9d538c-5569-40a8-8958-72636853872e",
+        "created_at": "2024-04-17T03:42:29.746918",
+        "updated_at": "2024-04-17T03:42:29.746922",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My_little_house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.35d1e030-5f83-4123-a6cd-d27e73a443fd": {
+        "id": "35d1e030-5f83-4123-a6cd-d27e73a443fd",
+        "created_at": "2024-04-17T03:47:50.681499",
+        "updated_at": "2024-04-17T03:47:50.681505",
+        "__class__": "Place"
+    },
+    "Place.edfd2f27-12a5-4db1-85bd-b4c968ee7c67": {
+        "id": "edfd2f27-12a5-4db1-85bd-b4c968ee7c67",
+        "created_at": "2024-04-17T03:48:00.056910",
+        "updated_at": "2024-04-17T03:48:00.056916",
+        "__class__": "Place"
+    },
+    "Place.224ba4fc-1e88-45a9-b76b-b5f97fab7e4a": {
+        "id": "224ba4fc-1e88-45a9-b76b-b5f97fab7e4a",
+        "created_at": "2024-04-17T03:52:58.195545",
+        "updated_at": "2024-04-17T03:52:58.195566",
+        "__class__": "Place"
+    },
+    "Place.99975f39-6a92-4427-b082-1760b14d952c": {
+        "id": "99975f39-6a92-4427-b082-1760b14d952c",
+        "created_at": "2024-04-17T03:53:11.987080",
+        "updated_at": "2024-04-17T03:53:11.987084",
+        "__class__": "Place"
+    },
+    "Place.7582f74a-16ab-444d-bff3-fb6076ee6fd2": {
+        "id": "7582f74a-16ab-444d-bff3-fb6076ee6fd2",
+        "created_at": "2024-04-17T03:54:05.155853",
+        "updated_at": "2024-04-17T03:54:05.155917",
+        "__class__": "Place"
+    },
+    "Place.3fb5dc4c-5ee7-4477-998b-419702d4bc5f": {
+        "id": "3fb5dc4c-5ee7-4477-998b-419702d4bc5f",
+        "created_at": "2024-04-17T03:55:29.636776",
+        "updated_at": "2024-04-17T03:55:29.636785",
+        "__class__": "Place"
+    },
+    "Place.231c7604-f1c9-485e-9e2c-6b22f968e277": {
+        "id": "231c7604-f1c9-485e-9e2c-6b22f968e277",
+        "created_at": "2024-04-17T03:56:08.804306",
+        "updated_at": "2024-04-17T03:56:08.804311",
+        "__class__": "Place"
+    },
+    "Place.5d062d80-3f6e-49cc-b604-6dc74780e9ab": {
+        "id": "5d062d80-3f6e-49cc-b604-6dc74780e9ab",
+        "created_at": "2024-04-17T03:57:11.229383",
+        "updated_at": "2024-04-17T03:57:11.229396",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.2302f49a-3b86-4815-bb6e-948a017fffd5": {
+        "id": "2302f49a-3b86-4815-bb6e-948a017fffd5",
+        "created_at": "2024-04-17T03:58:03.219186",
+        "updated_at": "2024-04-17T03:58:03.219190",
+        "__class__": "Place"
+    },
+    "Place.e804793d-bdc1-4b34-b19b-d9e528a234d5": {
+        "id": "e804793d-bdc1-4b34-b19b-d9e528a234d5",
+        "created_at": "2024-04-17T03:58:14.722194",
+        "updated_at": "2024-04-17T03:58:14.722198",
+        "__class__": "Place"
+    },
+    "Place.7db3167d-ecc7-4e27-85bb-edb5d0288121": {
+        "id": "7db3167d-ecc7-4e27-85bb-edb5d0288121",
+        "created_at": "2024-04-17T03:58:48.676289",
+        "updated_at": "2024-04-17T03:58:48.676294",
+        "__class__": "Place"
+    },
+    "Place.3d802345-632a-4727-a671-085e7ea3fe82": {
+        "id": "3d802345-632a-4727-a671-085e7ea3fe82",
+        "created_at": "2024-04-17T04:01:03.380321",
+        "updated_at": "2024-04-17T04:01:03.380371",
+        "__class__": "Place"
+    },
+    "Place.062a22b9-06a5-4934-aadd-0a782bafb87c": {
+        "id": "062a22b9-06a5-4934-aadd-0a782bafb87c",
+        "created_at": "2024-04-17T04:01:08.165800",
+        "updated_at": "2024-04-17T04:01:08.165805",
+        "__class__": "Place"
+    },
+    "Place.1c8aed39-c048-4f90-b02e-5c55d183dac5": {
+        "id": "1c8aed39-c048-4f90-b02e-5c55d183dac5",
+        "created_at": "2024-04-17T04:01:39.955371",
+        "updated_at": "2024-04-17T04:01:39.955376",
+        "__class__": "Place"
+    },
+    "Place.89851029-2e2c-4d1f-bb14-ea641c4b613c": {
+        "id": "89851029-2e2c-4d1f-bb14-ea641c4b613c",
+        "created_at": "2024-04-17T04:01:44.690608",
+        "updated_at": "2024-04-17T04:01:44.690616",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.9bee9f4d-0801-4678-9c35-b1259d61b8fc": {
+        "id": "9bee9f4d-0801-4678-9c35-b1259d61b8fc",
+        "created_at": "2024-04-17T04:01:54.868312",
+        "updated_at": "2024-04-17T04:01:54.868318",
+        "__class__": "Place"
+    },
+    "Place.df055475-e026-47cd-a173-14316b064461": {
+        "id": "df055475-e026-47cd-a173-14316b064461",
+        "created_at": "2024-04-17T04:02:02.053752",
+        "updated_at": "2024-04-17T04:02:02.053759",
+        "__class__": "Place"
+    },
+    "Place.9cc02af9-cbba-4b02-9118-902dcc6eca3f": {
+        "id": "9cc02af9-cbba-4b02-9118-902dcc6eca3f",
+        "created_at": "2024-04-17T04:02:06.003107",
+        "updated_at": "2024-04-17T04:02:06.003112",
+        "__class__": "Place"
+    },
+    "Place.33378a5d-77c3-4f30-b5a9-b4d649bd9eb0": {
+        "id": "33378a5d-77c3-4f30-b5a9-b4d649bd9eb0",
+        "created_at": "2024-04-17T04:02:25.667340",
+        "updated_at": "2024-04-17T04:02:25.667347",
+        "__class__": "Place"
+    },
+    "Place.9134e5c5-7f78-433a-a7fb-e7040abe4b3b": {
+        "id": "9134e5c5-7f78-433a-a7fb-e7040abe4b3b",
+        "created_at": "2024-04-17T04:02:30.547588",
+        "updated_at": "2024-04-17T04:02:30.547594",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.89b96492-c1aa-4e1b-b984-c514bb6598e0": {
+        "id": "89b96492-c1aa-4e1b-b984-c514bb6598e0",
+        "created_at": "2024-04-17T04:03:30.867344",
+        "updated_at": "2024-04-17T04:03:30.867351",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.d63b51ac-26cd-46e9-9b37-557d43337c3a": {
+        "id": "d63b51ac-26cd-46e9-9b37-557d43337c3a",
+        "created_at": "2024-04-17T04:17:24.719491",
+        "updated_at": "2024-04-17T04:17:24.719503",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "0001",
+        "__class__": "Place"
+    },
+    "Place.69255a3b-01b2-404a-a546-0f268dbc86b6": {
+        "id": "69255a3b-01b2-404a-a546-0f268dbc86b6",
+        "created_at": "2024-04-17T04:17:45.429266",
+        "updated_at": "2024-04-17T04:17:45.429337",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.6191ca4e-31f6-4e6d-807d-58f79b98db80": {
+        "id": "6191ca4e-31f6-4e6d-807d-58f79b98db80",
+        "created_at": "2024-04-17T04:18:12.163319",
+        "updated_at": "2024-04-17T04:18:12.163326",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "0001",
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.93c2d364-16bf-468a-a046-9fea6ca94f6f": {
+        "id": "93c2d364-16bf-468a-a046-9fea6ca94f6f",
+        "created_at": "2024-04-17T04:26:18.472480",
+        "updated_at": "2024-04-17T04:26:18.472491",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.a3d8d87a-b585-4227-9818-1e633e616fa1": {
+        "id": "a3d8d87a-b585-4227-9818-1e633e616fa1",
+        "created_at": "2024-04-17T04:28:42.474447",
+        "updated_at": "2024-04-17T04:28:42.474454",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.d8de5d1b-0283-4135-ae3e-84a315157d3f": {
+        "id": "d8de5d1b-0283-4135-ae3e-84a315157d3f",
+        "created_at": "2024-04-17T04:29:17.771318",
+        "updated_at": "2024-04-17T04:29:17.771353",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.020ad55e-85e0-4664-b42b-f5abc6e3df63": {
+        "id": "020ad55e-85e0-4664-b42b-f5abc6e3df63",
+        "created_at": "2024-04-17T04:29:56.405804",
+        "updated_at": "2024-04-17T04:29:56.405809",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.7bc85654-ca47-4635-9e1d-bd79b4673b60": {
+        "id": "7bc85654-ca47-4635-9e1d-bd79b4673b60",
+        "created_at": "2024-04-17T04:31:36.788000",
+        "updated_at": "2024-04-17T04:31:36.788004",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
     }
 }
