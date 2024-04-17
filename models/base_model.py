@@ -6,11 +6,14 @@ from os import getenv
 from datetime import datetime, timezone
 import models
 import uuid
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 
 
-Base = declarative_base()
+if models.storageType == "db":
+    Base = declarative_base()
+else:
+    Base = object
 
 
 class BaseModel:
@@ -18,9 +21,9 @@ class BaseModel:
     if getenv('HBNB_TYPE_STORAGE') == "db":
         id = Column(String(60), nullable=False,
                     unique=True, primary_key=True)
-        created_at = Column(datetime, nullable=False,
+        created_at = Column(DateTime, nullable=False,
                             default=datetime.now(timezone.utc))
-        updated_at = Column(datetime, nullable=False,
+        updated_at = Column(DateTime, nullable=False,
                             default=datetime.now(timezone.utc))
     def __init__(self, *args, **kwargs):
         """ init methoud for BaseModel"""

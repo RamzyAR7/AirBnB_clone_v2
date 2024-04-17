@@ -3,14 +3,14 @@
 from models.base_model import BaseModel, Base, getenv
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship, backref
-from models import storage
+import models
 from models.city import City
 
 
 class State(BaseModel, Base):
     """class : state to store more data"""
 
-    if getenv('HBNB_TYPE_STORAGE') == "db":
+    if models.storageType == "db":
         __tablename__ = "states"
         name = Column(String(128), nullable=False)
         cities = relationship("City", backref=backref("state",
@@ -22,6 +22,6 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             """returns the list of City of the current state"""
-            return [obj for obj in storage.all().values()
+            return [obj for obj in models.storage.all().values()
                     if (isinstance(obj, City) and
                         (self.id == obj.state_id))]
