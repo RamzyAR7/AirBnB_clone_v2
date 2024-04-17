@@ -319,5 +319,19 @@
         "updated_at": "2024-04-17T05:11:27.364068",
         "name": "Nevada",
         "__class__": "State"
+    },
+    "State.aaf2382f-8d94-4f19-8ba8-fcf93d9deb93": {
+        "id": "aaf2382f-8d94-4f19-8ba8-fcf93d9deb93",
+        "created_at": "2024-04-17T14:32:27.699981",
+        "updated_at": "2024-04-17T14:32:27.699985",
+        "name": "California",
+        "__class__": "State"
+    },
+    "State.729efde2-626c-4dc5-84d0-1a13e93b3280": {
+        "id": "729efde2-626c-4dc5-84d0-1a13e93b3280",
+        "created_at": "2024-04-17T14:32:27.701127",
+        "updated_at": "2024-04-17T14:32:27.701130",
+        "name": "Nevada",
+        "__class__": "State"
     }
 }
