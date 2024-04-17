@@ -20,7 +20,6 @@ class HBNBCommand(cmd.Cmd):
     classes = ["BaseModel", "User", "Amenity",
                "City", "Place", "Review", "State"]
 
-
     def do_create(self, args):
         """Creates a new instance of BaseModel."""
         if not args:
@@ -48,13 +47,12 @@ class HBNBCommand(cmd.Cmd):
                     value = value.replace("_", " ")
 
                 if hasattr(obj, key):
-                    if isinstance(getattr(obj, key), type(value)):
-                        setattr(obj, key, value)
+                    """if isinstance(getattr(obj, key), type(value)):"""
+                    setattr(obj, key, value)
             storage.save()
             print(obj.id)
         except NameError:
             print("** class doesn't exist **")
-
 
     def do_show(self, args):
         """Prints the string representation of an instance"""
