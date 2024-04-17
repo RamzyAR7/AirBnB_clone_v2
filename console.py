@@ -47,7 +47,6 @@ class HBNBCommand(cmd.Cmd):
                     value = value.replace("_", " ")
 
                 if hasattr(obj, key):
-                    """if isinstance(getattr(obj, key), type(value)):"""
                     setattr(obj, key, value)
             storage.save()
             print(obj.id)
