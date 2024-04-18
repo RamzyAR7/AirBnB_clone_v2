@@ -10,6 +10,7 @@ import uuid
 
 Base = declarative_base()
 
+
 class BaseModel:
     """BaseModel class the parant"""
     id = Column(String(60), unique=True, nullable=False, primary_key=True)

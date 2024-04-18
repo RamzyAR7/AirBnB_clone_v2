@@ -6,6 +6,7 @@ from models.city import City
 from models import base_model
 import os
 
+
 class DBStorage:
     __engine = None
     __session = None
@@ -53,4 +54,5 @@ class DBStorage:
 
     def reload(self):
         Base.metadata.create_all(self.__engine)
-        self.__session = scoped_session(sessionmaker(bind=self.__engine, expire_on_commit=False))
+        self.__session = scoped_session(
+            sessionmaker(bind=self.__engine, expire_on_commit=False))

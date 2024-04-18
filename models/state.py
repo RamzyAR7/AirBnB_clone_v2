@@ -19,6 +19,7 @@ class State(BaseModel, Base):
         def cities(self):
             """Getter attribute to retrieve associated with this state."""
             cities = models.storage.all("City")
-            return [city for city in cities.values() if city.state_id == self.id]
+            return [city for city in cities.values()
+                    if city.state_id == self.id]
     else:
         cities = relationship("City", backref="state", cascade="all, delete")

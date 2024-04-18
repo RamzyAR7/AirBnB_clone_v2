@@ -21,7 +21,8 @@ class FileStorage:
     def all(self, cls=None):
         """ for display all objs"""
         if cls is not None:
-            return {key: obj for key, obj in self.__objects.items() if isinstance(obj, cls)}
+            return {key: obj for key, obj in self.__objects.items()
+                    if isinstance(obj, cls)}
         return self.__objects
 
     def new(self, obj):
