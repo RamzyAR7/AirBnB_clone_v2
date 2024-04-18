@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship
 
 class User(BaseModel, Base):
     """class : User to store more data"""
-    if getenv(models.storageType) == "db":
+    if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "users"
         email = Column(String(128), nullable=False)
         password = Column(String(128), nullable=False)

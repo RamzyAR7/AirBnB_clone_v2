@@ -8,7 +8,7 @@ from sqlalchemy import Column, String, ForeignKey
 
 class Review(BaseModel, Base):
     """class : review to store more data"""
-    if getenv(models.storageType) == "db":
+    if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "reviews"
         text = Column(String(1024), nullable=False)
         place_id = Column(String(60), ForeignKey("places.id"),
