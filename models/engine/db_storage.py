@@ -6,6 +6,9 @@ from models.city import City
 from models import base_model
 import os
 
+classes = {"Amenity": Amenity, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
+
 
 class DBStorage:
     __engine = None
@@ -25,22 +28,16 @@ class DBStorage:
         if env == 'test':
             Base.metadata.drop_all(self.__engine)
 
-        Session = sessionmaker(bind=self.__engine, expire_on_commit=False)
-        self.__session = scoped_session(Session)
-
     def all(self, cls=None):
         """Query all objects of a particular class."""
-        objs = {}
-        if cls:
-            query_result = self.__session.query(cls).all()
-            for obj in query_result:
-                objs[f"{cls.__name__}.{obj.id}"] = obj
-        else:
-            for model_class in [State, City]:
-                query_result = self.__session.query(model_class).all()
-                for obj in query_result:
-                    objs[f"{model_class.__name__}.{obj.id}"] = obj
-        return objs
+        dct = {}
+        for clss in classes:
+            if cls is None or cls is classes[clss] or cls is clss:
+                objs = self.__session.query(classes[clss]).all()
+                for obj in objs:
+                    key = obj.__class__.__name__ + '.' + obj.id
+                    dct[key] = obj
+        return (dct)
 
     def new(self, obj):
         self.__session.add(obj)
@@ -54,5 +51,5 @@ class DBStorage:
 
     def reload(self):
         Base.metadata.create_all(self.__engine)
-        self.__session = scoped_session(
-            sessionmaker(bind=self.__engine, expire_on_commit=False))
+        sesssion_mk = sessionmaker(bind=self.__engine, expire_on_commit=False)
+        self.__session = scoped_session(sesssion_mk)
