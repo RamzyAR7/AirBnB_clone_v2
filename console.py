@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this module is for console
+this module is for console to interpret
 """
 import re
 import cmd
