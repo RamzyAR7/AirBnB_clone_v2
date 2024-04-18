@@ -1,6 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from models.base_model import Base
+from models.state import State
+from models.city import City
+from models import base_model
 import os
 
 class DBStorage:
@@ -25,14 +28,18 @@ class DBStorage:
         self.__session = scoped_session(Session)
 
     def all(self, cls=None):
-        from models import base_model
-
-        if cls is None:
-            objs = self.__session.query(base_model.Base).all()
-            return {type(obj).__name__ + '.' + obj.id: obj for obj in objs}
+        """Query all objects of a particular class."""
+        objs = {}
+        if cls:
+            query_result = self.__session.query(cls).all()
+            for obj in query_result:
+                objs[f"{cls.__name__}.{obj.id}"] = obj
         else:
-            objs = self.__session.query(cls).all()
-            return {type(obj).__name__ + '.' + obj.id: obj for obj in objs}
+            for model_class in [State, City]:
+                query_result = self.__session.query(model_class).all()
+                for obj in query_result:
+                    objs[f"{model_class.__name__}.{obj.id}"] = obj
+        return objs
 
     def new(self, obj):
         self.__session.add(obj)
