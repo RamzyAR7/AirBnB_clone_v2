@@ -1,27 +1,22 @@
 #!/usr/bin/python3
 """this module for class state"""
-from models.base_model import BaseModel, Base, getenv
-from sqlalchemy import Column, String
-from sqlalchemy.orm import relationship, backref
-import models
+from os import getenv
+from models.base_model import BaseModel
+from sqlalchemy.orm import relationship
+from sqlalchemy import String, Column
+from models import storage
 from models.city import City
 
 
-class State(BaseModel, Base):
+class State(BaseModel):
     """class : state to store more data"""
+    __tablename__ = "states"
+    name = Column(String(128), nullable=False)
+    cities = relationship("City", backref="state", cascade="all, delete")
 
-    if models.storageType == "db":
-        __tablename__ = "states"
-        name = Column(String(128), nullable=False)
-        cities = relationship("City", backref=backref("state",
-                                                      cascade="all"),
-                              cascade="all, delete-orphan",
-                              single_parent=True)
-    else:
-        name = ""
+    if getenv('HBNB_TYPE_STORAGE') != "db":
         @property
         def cities(self):
-            """returns the list of City of the current state"""
-            return [obj for obj in models.storage.all().values()
-                    if (isinstance(obj, City) and
-                        (self.id == obj.state_id))]
+            """Getter attribute to retrieve cities associated with this state."""
+            cities = storage.all(City)
+            return [city for city in cities.values() if city.state_id == self.id]

@@ -2,29 +2,20 @@
 """
 this module for base class
 """
-from os import getenv
-from datetime import datetime, timezone
+from datetime import datetime
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import String, DateTime, Column
 import models
 import uuid
-from sqlalchemy import Column, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
 
-
-if models.storageType == "db":
-    Base = declarative_base()
-else:
-    Base = object
-
+Base = declarative_base()
 
 class BaseModel:
     """BaseModel class the parant"""
-    if getenv('HBNB_TYPE_STORAGE') == "db":
-        id = Column(String(60), nullable=False,
-                    unique=True, primary_key=True)
-        created_at = Column(DateTime, nullable=False,
-                            default=datetime.now(timezone.utc))
-        updated_at = Column(DateTime, nullable=False,
-                            default=datetime.now(timezone.utc))
+    id = Column(String(60), unique=True, nullable=False, primary_key=True)
+    created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
+    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow())
+
     def __init__(self, *args, **kwargs):
         """ init methoud for BaseModel"""
         if kwargs:
@@ -55,10 +46,11 @@ class BaseModel:
         dct['__class__'] = type(self).__name__
         dct['created_at'] = self.created_at.isoformat()
         dct['updated_at'] = self.updated_at.isoformat()
-        dct.pop("_sa_instance_state", None)
+
+        dct.pop('_sa_instance_state', None)
 
         return dct
 
     def delete(self):
-        """deletes current instance"""
+        """delete the current obj"""
         models.storage.delete(self)
