@@ -2,13 +2,14 @@
 """this module for class user"""
 from models.base_model import BaseModel, Base
 import models
+from os import getenv
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 
 
 class User(BaseModel, Base):
     """class : User to store more data"""
-    if models.storageType == "db":
+    if getenv(models.storageType) == "db":
         __tablename__ = "users"
         email = Column(String(128), nullable=False)
         password = Column(String(128), nullable=False)

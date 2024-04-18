@@ -2,6 +2,7 @@
 """this module for class place"""
 from models.base_model import BaseModel, Base
 import models
+from os import getenv
 from sqlalchemy import Column, String, ForeignKey, Integer, Float, Table
 from sqlalchemy.orm import relationship
 from models.amenity import Amenity
@@ -16,7 +17,7 @@ place_amenity = Table('association', Base.metadata,
 
 class Place(BaseModel, Base):
     """class : Place to store more data"""
-    if models.storageType == "db":
+    if getenv(models.storageType) == "db":
         __tablename__ = "places"
         city_id = Column(String(60), ForeignKey("cities.id"),
                          nullable=False)

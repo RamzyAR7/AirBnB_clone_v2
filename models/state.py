@@ -14,7 +14,7 @@ class State(BaseModel, Base):
         """initializes state"""
         super().__init__(*args, **kwargs)
 
-    if getenv('HBNB_TYPE_STORAGE') == "db":
+    if getenv(models.storageType) == "db":
         __tablename__ = "states"
         name = Column(String(128), nullable=False)
         cities = relationship("City", backref="state", cascade="all, delete")

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ for reload data every process"""
-import os
-storageType = "db"
+from os import getenv
+storageType = 'HBNB_TYPE_STORAGE'
 
-if os.getenv('HBNB_TYPE_STORAGE') == storageType:
+if getenv(storageType) == "db":
     from models.engine.db_storage import DBStorage
     storage = DBStorage()
 else:

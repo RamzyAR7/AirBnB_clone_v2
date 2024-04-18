@@ -9,7 +9,7 @@ from sqlalchemy import String, DateTime, Column
 import models
 import uuid
 
-if getenv('HBNB_TYPE_STORAGE') == "db":
+if getenv(models.storageType) == "db":
     Base = declarative_base()
 else:
     Base = object
@@ -17,7 +17,7 @@ else:
 
 class BaseModel:
     """BaseModel class the parant"""
-    if getenv('HBNB_TYPE_STORAGE') == "db":
+    if getenv(models.storageType) == "db":
         id = Column(String(60), unique=True, nullable=False, primary_key=True)
         created_at = Column(DateTime, default=datetime.utcnow())
         updated_at = Column(DateTime, default=datetime.utcnow())
