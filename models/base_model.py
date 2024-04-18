@@ -16,7 +16,7 @@ else:
 
 
 class BaseModel:
-    """BaseModel class the parant"""
+    """BaseModel class the parant for others"""
     if getenv('HBNB_TYPE_STORAGE') == "db":
         id = Column(String(60), unique=True, nullable=False, primary_key=True)
         created_at = Column(DateTime, default=datetime.utcnow())
