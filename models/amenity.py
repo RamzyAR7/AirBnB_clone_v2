@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """this module for class amenity"""
-from models.base_model import BaseModel, Base
 import os
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
 
 
