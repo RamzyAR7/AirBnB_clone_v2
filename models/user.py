@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """this module for class user"""
 from models.base_model import BaseModel, Base
-import models
 from os import getenv
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
