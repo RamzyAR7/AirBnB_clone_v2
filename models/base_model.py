@@ -2,20 +2,25 @@
 """
 this module for base class
 """
+from os import getenv
 from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String, DateTime, Column
 import models
 import uuid
 
-Base = declarative_base()
+if getenv('HBNB_TYPE_STORAGE') == "db":
+    Base = declarative_base()
+else:
+    Base = object
 
 
 class BaseModel:
     """BaseModel class the parant"""
-    id = Column(String(60), unique=True, nullable=False, primary_key=True)
-    created_at = Column(DateTime, nullable=False, default=datetime.utcnow())
-    updated_at = Column(DateTime, nullable=False, default=datetime.utcnow())
+    if getenv('HBNB_TYPE_STORAGE') == "db":
+        id = Column(String(60), unique=True, nullable=False, primary_key=True)
+        created_at = Column(DateTime, default=datetime.utcnow())
+        updated_at = Column(DateTime, default=datetime.utcnow())
 
     def __init__(self, *args, **kwargs):
         """ init methoud for BaseModel"""

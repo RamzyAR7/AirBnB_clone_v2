@@ -7,6 +7,10 @@ from sqlalchemy import Column, String, ForeignKey
 
 class City(BaseModel, Base):
     """class : City to store more data"""
+    def __init__(self, *args, **kwargs):
+        """initializes city"""
+        super().__init__(*args, **kwargs)
+
     if models.storageType == "db":
         __tablename__ = "cities"
         name = Column(String(128), nullable=False)
