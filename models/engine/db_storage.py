@@ -13,6 +13,11 @@ from models.review import Review
 from models.amenity import Amenity
 from models.user import User
 
+user = os.getenv("HBNB_MYSQL_USER")
+password = os.getenv("HBNB_MYSQL_PWD")
+host = os.getenv("HBNB_MYSQL_HOST", default="localhost")
+db = os.getenv("HBNB_MYSQL_DB")
+env = os.getenv("HBNB_ENV", default="production")
 classes = {"Amenity": Amenity, "City": City,
            "Place": Place, "Review": Review, "State": State, "User": User}
 
@@ -24,12 +29,6 @@ class DBStorage:
 
     def __init__(self):
         """initialaisation of instance"""
-        user = os.getenv("HBNB_MYSQL_USER")
-        password = os.getenv("HBNB_MYSQL_PWD")
-        host = os.getenv("HBNB_MYSQL_HOST", default="localhost")
-        db = os.getenv("HBNB_MYSQL_DB")
-        env = os.getenv("HBNB_ENV", default="production")
-
         self.__engine = create_engine(
             'mysql+mysqldb://{}:{}@{}/{}'.format(user, password, host,
                                                  db, pool_pre_ping=True))
