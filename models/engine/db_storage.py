@@ -46,7 +46,7 @@ class DBStorage:
                 for obj in objs:
                     key = obj.__class__.__name__ + '.' + obj.id
                     dct[key] = obj
-        return (dct)
+        return dct
 
     def new(self, obj):
         """Adds an object to database"""
