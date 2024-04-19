@@ -8,14 +8,14 @@ from sqlalchemy.orm import relationship, backref
 from models.amenity import Amenity
 
 if getenv('HBNB_TYPE_STORAGE') == "db":
-    place_amenity = Table('association',
+    place_amenity = Table('association', Base.metadata,
                           Column('place_id', String(60),
                                  ForeignKey('places.id'),
                                  primary_key=True, nullable=False),
                           Column('amenity_id', String(60),
                                  ForeignKey('amenities.id'),
-                                 primary_key=True, nullable=False),
-                           metadata=Base.metadata)
+                                 primary_key=True, nullable=False)
+                          )
 
 
 class Place(BaseModel, Base):
