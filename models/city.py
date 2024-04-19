@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """this module for class city"""
-import models
 import os
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, ForeignKey

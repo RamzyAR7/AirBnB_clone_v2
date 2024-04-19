@@ -10,9 +10,6 @@ from models.city import City
 
 class State(BaseModel, Base):
     """State class to state information."""
-    def __init__(self, *args, **kwargs):
-        """initializes state"""
-        super().__init__(*args, **kwargs)
 
     if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "states"
@@ -20,8 +17,6 @@ class State(BaseModel, Base):
         cities = relationship("City", backref="state", cascade="all, delete")
     else:
         name = ""
-
-    if getenv('HBNB_TYPE_STORAGE') != "db":
         @property
         def cities(self):
             """Getter attribute to retrieve associated with this state."""

@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """this module for class review"""
-from models.base_model import BaseModel, Base
-import models
 from os import getenv
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, ForeignKey
 
 
