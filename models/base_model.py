@@ -21,20 +21,20 @@ class BaseModel:
         id = Column(String(60), unique=True, nullable=False, primary_key=True)
         created_at = Column(DateTime, default=datetime.utcnow())
         updated_at = Column(DateTime, default=datetime.utcnow())
-    else:
-        def __init__(self, *args, **kwargs):
-            """ init methoud for BaseModel"""
-            if kwargs:
-                for key, value in kwargs.items():
-                    if key == '__class__':
-                        continue
-                    if key == "created_at" or key == "updated_at":
-                        value = datetime.fromisoformat(value)
-                    setattr(self, key, value)
-            else:
-                self.id = str(uuid.uuid4())
-                self.created_at = datetime.now()
-                self.updated_at = datetime.now()
+
+    def __init__(self, *args, **kwargs):
+        """ init methoud for BaseModel"""
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == '__class__':
+                    continue
+                if key == "created_at" or key == "updated_at":
+                    value = datetime.fromisoformat(value)
+                setattr(self, key, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """ str reprecentation """
