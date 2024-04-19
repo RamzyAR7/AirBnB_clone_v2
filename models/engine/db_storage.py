@@ -18,10 +18,12 @@ classes = {"Amenity": Amenity, "City": City,
 
 
 class DBStorage:
+    """Class DBStorage for database handling"""
     __engine = None
     __session = None
 
     def __init__(self):
+        """initialaisation of instance"""
         user = os.getenv("HBNB_MYSQL_USER")
         password = os.getenv("HBNB_MYSQL_PWD")
         host = os.getenv("HBNB_MYSQL_HOST", default="localhost")
@@ -47,16 +49,20 @@ class DBStorage:
         return (dct)
 
     def new(self, obj):
+        """Adds an object to database"""
         self.__session.add(obj)
 
     def save(self):
+        """Saves changes to database"""
         self.__session.commit()
 
     def delete(self, obj=None):
+        """Delets an object from database"""
         if obj is not None:
             self.__session.delete(obj)
 
     def reload(self):
+        """Reload object stored in database"""
         Base.metadata.create_all(self.__engine)
         sesssion_mk = sessionmaker(bind=self.__engine, expire_on_commit=False)
         session = scoped_session(sesssion_mk)
