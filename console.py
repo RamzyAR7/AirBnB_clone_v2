@@ -48,6 +48,7 @@ class HBNBCommand(cmd.Cmd):
 
                 if hasattr(obj, key):
                     setattr(obj, key, value)
+            storage.new(obj)
             storage.save()
             print(obj.id)
         except NameError:
