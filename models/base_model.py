@@ -17,10 +17,6 @@ else:
 
 class BaseModel:
     """BaseModel class the parant for others"""
-    if getenv('HBNB_TYPE_STORAGE') == "db":
-        id = Column(String(60), unique=True, nullable=False, primary_key=True)
-        created_at = Column(DateTime, default=datetime.utcnow())
-        updated_at = Column(DateTime, default=datetime.utcnow())
 
     def __init__(self, *args, **kwargs):
         """ init methoud for BaseModel"""
@@ -35,6 +31,11 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+
+    if getenv('HBNB_TYPE_STORAGE') == "db":
+        id = Column(String(60), unique=True, nullable=False, primary_key=True)
+        created_at = Column(DateTime, default=datetime.utcnow())
+        updated_at = Column(DateTime, default=datetime.utcnow())
 
     def __str__(self):
         """ str reprecentation """
