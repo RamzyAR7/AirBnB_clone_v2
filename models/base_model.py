@@ -38,7 +38,7 @@ class BaseModel:
 
     def __str__(self):
         """ str reprecentation """
-        return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"
+        return f"[{type(self).__name__}] ({self.id}) {self.to_dict()}"
 
     def save(self):
         """ to save obj in json file """
