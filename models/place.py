@@ -7,12 +7,15 @@ from sqlalchemy import Column, String, ForeignKey, Integer, Float, Table
 from sqlalchemy.orm import relationship
 from models.amenity import Amenity
 
-place_amenity = Table('association', Base.metadata,
-    Column('place_id', String(60), ForeignKey('places.id'),
-           primary_key=True, nullable=False),
-    Column('amenity_id', String(60), ForeignKey('amenities.id'),
-           primary_key=True, nullable=False)
-)
+if getenv('HBNB_TYPE_STORAGE') == "db":
+    place_amenity = Table('association', Base.metadata,
+                          Column('place_id', String(60),
+                                 ForeignKey('places.id'),
+                                 primary_key=True, nullable=False),
+                          Column('amenity_id', String(60),
+                                 ForeignKey('amenities.id'),
+                                 primary_key=True, nullable=False)
+                          )
 
 
 class Place(BaseModel, Base):
@@ -31,8 +34,8 @@ class Place(BaseModel, Base):
         price_by_night = Column(Integer, default=0, nullable=False)
         latitude = Column(Float, nullable=True)
         longitude = Column(Float, nullable=True)
-        reviews =  relationship("Review", backref="place",
-                              cascade="all, delete-orphan")
+        reviews = relationship("Review", backref="place",
+                               cascade="all, delete-orphan")
         place_amenities = relationship("Place",
                                        secondary=place_amenity,
                                        backref="place_amenities",
