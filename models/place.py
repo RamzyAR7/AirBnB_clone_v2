@@ -4,7 +4,7 @@ from models.base_model import BaseModel, Base
 import models
 from os import getenv
 from sqlalchemy import Column, String, ForeignKey, Integer, Float, Table
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from models.amenity import Amenity
 
 if getenv('HBNB_TYPE_STORAGE') == "db":
@@ -34,8 +34,10 @@ class Place(BaseModel, Base):
         price_by_night = Column(Integer, default=0, nullable=False)
         latitude = Column(Float, nullable=True)
         longitude = Column(Float, nullable=True)
-        reviews = relationship("Review", backref="place",
-                               cascade="all, delete-orphan")
+        reviews = relationship("Review",
+                              backref=backref("place", cascade="all"),
+                              cascade="all, delete-orphan",
+                              single_parent=True)
         place_amenities = relationship("Amenity",
                                        secondary=place_amenity,
                                        backref="place_amenities",
