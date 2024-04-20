@@ -3,9 +3,11 @@
 ![AirBnB Logo](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/65f4a1dd9c51265f49d0.png)
 
 ## Description
+
 This project is part of the Holberton School curriculum and is the continuation of the AirBnB clone project. The focus of this project is to implement MySQL database storage using SQLAlchemy in the existing AirBnB clone project.
 
 ## Environment
+
 - Language: Python
 - OS: Ubuntu 20.04 LTS
 - Style guidelines: [PEP 8 (version 2.8.0)](https://www.python.org/dev/peps/pep-0008/)
@@ -14,6 +16,7 @@ This project is part of the Holberton School curriculum and is the continuation 
 - ORM: SQLAlchemy version 1.4.x
 
 ## Learning Objectives
+
 - Understand Unit testing and its implementation in a large project
 - Learn how to handle *args and **kwargs in Python
 - Understand ORM (Object Relational Mapping) and how to use SQLAlchemy
@@ -21,6 +24,7 @@ This project is part of the Holberton School curriculum and is the continuation 
 - Understand the concept of environment variables and how to use them in Python projects
 
 ## Files
+
 - All files will be interpreted/compiled on Ubuntu 20.04 LTS using Python3 (version 3.8.5)
 - All Python scripts should end with a new line
 - All Python scripts must be executable
