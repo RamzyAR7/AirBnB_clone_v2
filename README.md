@@ -44,6 +44,9 @@ This project is part of the Holberton School curriculum and is the continuation 
 - [✔️] 9. DBStorage - Review
 - [✖️] 10. DBStorage - Amenity... and BOOM!
 
-## Author
-Ahmed Ramzy <ahmed.ramzy@holbertonschool.com> - [GitHub](https://github.com/Ahmed-Ramzy)
-Mahmoud Metwalli <mahmoud.metwalli@holbertonschool.com> - [GitHub](https://github.com/metwallyhammed)
+## Developers:
+
+| **Ahmed Ramzy (AKA Ramzy)** | **Mahmoud Metwalli (AKA Metwalli)** |
+|---|---|
+|[@Ahmed Ramzy](https://www.github.com/RamzyAR7) | [@Mahmoud Metwalli](https://github.com/MahmoudMetwalli)|
+| ![Ahmed Ramzy](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/image%20(1).png) | ![Mahmoud Metwalli](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/image%20(2).png)|
