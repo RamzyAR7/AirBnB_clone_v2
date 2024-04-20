@@ -9,10 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String, DateTime, Column
 import models
 
-if getenv('HBNB_TYPE_STORAGE') == "db":
-    Base = declarative_base()
-else:
-    Base = object
+Base = declarative_base()
 
 
 class BaseModel:

@@ -5,10 +5,9 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship, backref
 
-
-class City(BaseModel, Base):
-    """class : City to store more data"""
-    if os.getenv('HBNB_TYPE_STORAGE') == "db":
+if os.getenv('HBNB_TYPE_STORAGE') == "db":
+    class City(BaseModel, Base):
+        """class : City to store more data"""
         __tablename__ = "cities"
         name = Column(String(128), nullable=False)
         state_id = Column(String(60), ForeignKey("states.id"),
@@ -17,6 +16,8 @@ class City(BaseModel, Base):
                               backref=backref("cities", cascade="all"),
                               cascade="all, delete-orphan",
                               single_parent=True)
-    else:
+else:
+    class City(BaseModel):
+        """class : City to store more data"""
         name = ""
         state_id = ""
