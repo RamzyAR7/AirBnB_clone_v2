@@ -35,9 +35,9 @@ This project is part of the Holberton School curriculum and is the continuation 
 
 ## Tasks
 
-- Ⓜ️ 0. Fork me if you can!                  COMPLETED ✅
-- Ⓜ️ 1. Bug free!                            NOT COMPLETE ❌
-- Ⓜ️ 2. Console improvements                 COMPLETED ✅
+- Ⓜ️ 0. Fork me if you can!------------------COMPLETED ✅
+- Ⓜ️ 1. Bug free!----------------------------NOT COMPLETE ❌
+- Ⓜ️ 2. Console improvements-----------------COMPLETED ✅
 - Ⓜ️ 3. MySQL setup development              COMPLETED ✅
 - Ⓜ️ 4. MySQL setup test                     COMPLETED ✅
 - Ⓜ️ 5. Delete object                        COMPLETED ✅
