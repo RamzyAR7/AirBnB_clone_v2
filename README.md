@@ -4,7 +4,7 @@
 
 ## Description
 
-This project is part of the Holberton School curriculum and is the continuation of the AirBnB clone project. The focus of this project is to implement MySQL database storage using SQLAlchemy in the existing AirBnB clone project.
+
 
 ## Environment
 
