@@ -1,6 +1,5 @@
 # 0x02. AirBnB clone - MySQL
 
-![AirBnB Logo](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/65f4a1dd9c51265f49d0.png)
 
 ## Description
 This project is part of the Holberton School curriculum and is the continuation of the AirBnB clone project. The focus of this project is to implement MySQL database storage using SQLAlchemy in the existing AirBnB clone project.
