@@ -6,9 +6,9 @@ from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship, backref
 
 
-if getenv('HBNB_TYPE_STORAGE') == "db":
-    class User(BaseModel, Base):
-        """class : User to store more data"""
+class User(BaseModel, Base):
+    """class : User to store more data"""
+    if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "users"
         email = Column(String(128), nullable=False)
         password = Column(String(128), nullable=False)
@@ -22,9 +22,7 @@ if getenv('HBNB_TYPE_STORAGE') == "db":
                               backref=backref("user", cascade="all"),
                               cascade="all, delete-orphan",
                               single_parent=True)
-else:
-    class User(BaseModel):
-        """class : User to store more data"""
+    else:
         email = ""
         password = ""
         first_name = ""

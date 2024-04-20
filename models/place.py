@@ -17,8 +17,10 @@ if getenv('HBNB_TYPE_STORAGE') == "db":
                                  primary_key=True, nullable=False)
                           )
 
-    class Place(BaseModel, Base):
-        """class : Place to store more data"""
+
+class Place(BaseModel, Base):
+    """class : Place to store more data"""
+    if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "places"
         city_id = Column(String(60), ForeignKey("cities.id"),
                          nullable=False)
@@ -41,9 +43,7 @@ if getenv('HBNB_TYPE_STORAGE') == "db":
                                        backref="place_amenities",
                                        viewonly=False)
         amenity_ids = []
-else:
-    class Place(BaseModel):
-        """class : Place to store more data"""
+    else:
         city_id = ""
         user_id = ""
         name = ""

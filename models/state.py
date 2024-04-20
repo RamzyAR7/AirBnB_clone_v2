@@ -7,18 +7,18 @@ from sqlalchemy import String, Column
 import models
 from models.city import City
 
-if getenv('HBNB_TYPE_STORAGE') == "db":
-    class State(BaseModel, Base):
-        """State class to state information."""
+
+class State(BaseModel, Base):
+    """State class to state information."""
+
+    if getenv('HBNB_TYPE_STORAGE') == "db":
         __tablename__ = "states"
         name = Column(String(128), nullable=False)
         cities = relationship("City",
-                              backref=backref("state", cascade="all"),
-                              cascade="all, delete-orphan",
-                              single_parent=True)
-else:
-    class State(BaseModel):
-        """State class to state information."""
+                               backref=backref("state", cascade="all"),
+                               cascade="all, delete-orphan",
+                               single_parent=True)
+    else:
         name = ""
 
         @property
