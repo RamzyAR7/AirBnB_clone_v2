@@ -34,17 +34,6 @@ This project is part of the Holberton School curriculum and is the continuation 
 - The Python unit tests folder should be named `tests` and placed at the root of the project directory
 
 ## Tasks
-Ⓜ️ 0. README, AUTHORS:                        COMPLETED ✅
-Ⓜ️ 1. Be pycodestyle compliant:               COMPLETED ✅
-Ⓜ️ 2. Unittests:                              COMPLETED ✅
-Ⓜ️ 3. BaseModel:                              COMPLETED ✅
-Ⓜ️ 4. Create BaseModel from dictionary:       COMPLETED ✅
-Ⓜ️ 5. Store first object:                     COMPLETED ✅
-Ⓜ️ 6. Console 0.0.1:                          COMPLETED ✅
-Ⓜ️ 7. Console 0.1:                            COMPLETED ✅
-Ⓜ️ 8. First User:                              COMPLETED ✅
-Ⓜ️ 9. More classes:                           COMPLETED ✅
-Ⓜ️ 10. Console 1.0:   
 
 - Ⓜ️ 0. Fork me if you can!                  COMPLETED ✅
 - Ⓜ️ 1. Bug free!                            NOT COMPLETE ❌
@@ -55,7 +44,7 @@ This project is part of the Holberton School curriculum and is the continuation 
 - Ⓜ️ 6. DBStorage - States and Cities        NOT COMPLETE ❌
 - Ⓜ️ 7. DBStorage - User                     COMPLETED ✅
 - Ⓜ️ 8. DBStorage - Placea                   NOT COMPLETE ❌
--  9. DBStorage - Review                     COMPLETED ✅
+- Ⓜ️ 9. DBStorage - Review                     COMPLETED ✅
 - Ⓜ️ 10. DBStorage - Amenity... and BOOM!    NOT COMPLETE ❌
 
 ## Developers:
