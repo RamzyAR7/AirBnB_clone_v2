@@ -44,8 +44,8 @@ This project is part of the Holberton School curriculum and is the continuation 
 - Ⓜ️ 6. DBStorage - States and Cities--------NOT COMPLETE ❌
 - Ⓜ️ 7. DBStorage - User---------------------COMPLETED ✅
 - Ⓜ️ 8. DBStorage - Placea-------------------NOT COMPLETE ❌
-- Ⓜ️ 9. DBStorage - Review                     COMPLETED ✅
-- Ⓜ️ 10. DBStorage - Amenity... and BOOM!    NOT COMPLETE ❌
+- Ⓜ️ 9. DBStorage - Review-------------------COMPLETED ✅
+- Ⓜ️ 10. DBStorage - Amenity... and BOOM!-----NOT COMPLETE ❌
 
 ## Developers:
 
