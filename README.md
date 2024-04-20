@@ -59,9 +59,3 @@ SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 
 - Ⓜ️ 9. DBStorage - Review-------------------COMPLETED ✅
 - Ⓜ️ 10. DBStorage - Amenity... and BOOM!-----NOT COMPLETE ❌
 
-## Developers:
-
-| **Ahmed Ramzy (AKA Ramzy)** | **Mahmoud Metwalli (AKA Metwalli)** |
-|---|---|
-|[@Ahmed Ramzy](https://www.github.com/RamzyAR7) | [@Mahmoud Metwalli](https://github.com/MahmoudMetwalli)|
-| ![Ahmed Ramzy](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/image%20(1).png) | ![Mahmoud Metwalli](https://github.com/RamzyAR7/AirBnB_clone/blob/main/Images/image%20(2).png)|
