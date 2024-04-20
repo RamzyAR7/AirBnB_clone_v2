@@ -38,7 +38,7 @@ This project is part of the Holberton School curriculum and is the continuation 
 - The Python unit tests folder should be named `tests` and placed at the root of the project directory
 
 
-## Comments for your SQL file:
+##Comments for your SQL file:
 ```sql
 -- first 3 students in the Batch ID=3
 -- because Batch 3 is the best!
