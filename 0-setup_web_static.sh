@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if ! command -v nginx &> /dec/null; then
     sudo apt-get update
     sudo apt-get -y install nginx
@@ -14,13 +16,7 @@ sudo echo "<html>
 sudo ln -sf /data/web_static/releases/test /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
 
-config_block="
-    location /hbnb_static {
-        alias /data/web_static/current/;
-    }
-"
-sudo sed -i "/server_name _;/a $config_block" /etc/nginx/sites-available/default
-
+sudo sed -i '26i\	location /hbnb_static {\n\t alias /data/web_static/current/;\n} ' /etc/nginx/sites-available/default
 sudo service nginx restart
 
 exit 0
