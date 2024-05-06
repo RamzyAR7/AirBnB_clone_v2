@@ -8,7 +8,7 @@ import os
 
 env.hosts = ['54.237.93.225', '54.172.137.10']
 env.user = 'ubuntu'  # Assuming the username is 'ubuntu', change if needed
-env.key_filename = ['~/.ssh/id_rsa']  # Assuming the SSH private key file is 'my_ssh_private_key', change if needed
+env.key_filename = ['~/.ssh/id_rsa']
 
 
 def do_deploy(archive_path):
@@ -17,7 +17,7 @@ def do_deploy(archive_path):
     """
     if not os.path.exists(archive_path):
         return False
-    
+
     try:
         filename = os.path.basename(archive_path)
         folder_name = filename.split('.')[0]
