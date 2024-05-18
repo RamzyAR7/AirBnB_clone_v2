@@ -22,7 +22,7 @@ def hbnb():
     """
     return "HBNB"
 
-name = None
+
 @my_app.route("/c/<text>", strict_slashes=False)
 def C_is_fun(text):
     """
