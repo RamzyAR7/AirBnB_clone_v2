@@ -1,11 +1,16 @@
 #!/usr/bin/python3
-
+"""
+A simple Flask web application.
+"""
 from flask import Flask
 
 my_app = Flask(__name__)
 
 @my_app.route("/", strict_slashes=False)
 def Hello():
+    """
+    Returns a string 'Hello HBNB!'
+    """
     return "Hello HBNB!"
 
 if __name__ == "__main__":
