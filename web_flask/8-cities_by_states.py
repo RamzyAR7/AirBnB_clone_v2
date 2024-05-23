@@ -19,7 +19,7 @@ def teardown_db(exception=None):
     storage.close()
 
 
-@app.route("/states_list", strict_slashes=False)
+@app.route("/cities_by_states", strict_slashes=False)
 def states_list():
     """
     Displays an HTML page with a list of all State objects present
