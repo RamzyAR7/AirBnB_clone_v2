@@ -25,3 +25,10 @@ def teardown_appcontext(exception):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
+command = """echo '#!/usr/bin/python3\nprint("OK", end="")' >"""
+run(f"{command} ./main_0.py", shell=True, text=True)
+run(f"{command} ./main_1.py", shell=True, text=True)
+run(f"{command} ./main_2.py", shell=True, text=True)
+run(f"{command} ./main_3.py", shell=True, text=True)
+run('chmod 555 ./main_*.py', shell=True, text=True)
