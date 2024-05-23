@@ -4,8 +4,6 @@ A simple Flask web application.
 """
 from flask import Flask, render_template
 from models import storage
-from models.state import State
-
 
 app = Flask(__name__)
 
@@ -17,11 +15,8 @@ def states_list():
     in DBStorage,
     sorted by name (A->Z).
     """
-    dict_states = storage.all(State)
-    all_states = []
-    for k, v in dict_states.items():
-        all_states.append(v)
-    return render_template('7-states_list.html', all_states=all_states)
+    dstates = storage.all("State")
+    return render_template("7-states_list.html", states=states)
 
 
 @app.teardown_appcontext
