@@ -5,7 +5,6 @@ A simple Flask web application.
 from flask import Flask, render_template
 from models import storage
 from models.state import State
-from models.city import City
 
 
 app = Flask(__name__)
@@ -26,9 +25,9 @@ def states_list():
     in DBStorage,
     sorted by name (A->Z).
     Display a HTML page with the list of states"""
-    states = storage.all(State).values()    
+    states = storage.all(State).values()
     return render_template('8-cities_by_states.html', states=states)
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000)
