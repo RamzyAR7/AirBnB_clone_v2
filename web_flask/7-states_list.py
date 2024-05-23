@@ -17,17 +17,19 @@ def states_list():
     in DBStorage,
     sorted by name (A->Z).
     """
-    states = storage.all(State).values()
-    sorted_states = sorted(states, key=lambda state: state.name)
-    return render_template('7-states_list.html', states=sorted_states)
+    dict_states = storage.all(State)
+    all_states = []
+    for k, v in dict_states.items():
+        all_states.append(v)
+    return render_template('7-states_list.html', all_states=all_states)
 
 
 @app.teardown_appcontext
-def teardown_db(exception):
+def teardown_db(self):
     """
     Remove the current SQLAlchemy Session.
     """
-    storage.close()
+    self.close()
 
 
 if __name__ == "__main__":
