@@ -55,7 +55,5 @@ class FileStorage:
             self.__objects.pop(key, None)
 
     def close(self):
-        """
-        Call the reload method for deserializing the JSON file to objects.
-        """
+        """calls reload"""
         self.reload()
